@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: sky_books
+    ports:
+      - '5432:5432'
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+  # backend:
+  #   build: ./backend
+  #   command: npm run start:dev
+  #   volumes:
+  #     - ./backend:/app
+  #   ports:
+  #     - '3000:3000'
+  #   environment:
+  #     DB_HOST: db
+  #     DB_PORT: 5432
+  #     DB_USERNAME: postgres
+  #     DB_PASSWORD: postgres
+  #     DB_DATABASE: sky_books
+  #   depends_on:
+  #     - db
+
+volumes:
+  db-data:

@@ -1,0 +1,6 @@
+[submodule "starbooks-backend"]
+	path = starbooks-backend
+	url = git@github.com:GitAddRemote/starbooks-backend.git
+[submodule "starbooks-frontend"]
+	path = starbooks-frontend
+	url = git@github.com:GitAddRemote/starbooks-frontend.git
